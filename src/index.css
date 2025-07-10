@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: #202142;
   color: #fff;
   line-height: 1.6;
@@ -21,13 +21,16 @@ ul {
   max-width: 768px;
   margin: auto;
   padding: 0 20px;
+  background-color: #ff6a95;
 }
 
-header {
+.Header {
+  background:rgba(0, 0, 0, 0.3);
+  color: #ff6a95;
   height: 70px;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin-bottom: 30px;
 }
@@ -91,11 +94,11 @@ header {
   color: #fff;
 }
 
-[type='radio'] {
+[type="radio"] {
   opacity: 0;
 }
 
-[type='radio']:checked ~ label {
+[type="radio"]:checked ~ label {
   background: #ff6a95;
   color: #fff;
 }
