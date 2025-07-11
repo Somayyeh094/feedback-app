@@ -23,8 +23,8 @@
   margin: 40px auto;
   position: relative;
 }
-.Card:first-child{
-margin-top: 10px;
+.Card:first-child {
+  margin-top: 10px;
 }
 
 .num-display {
@@ -35,12 +35,12 @@ margin-top: 10px;
   color: #fff;
   padding: 10px 23px;
   width: 25px;
-display: flex;
-justify-content: center;
-border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
 }
 
-.edit{
+.edit {
   background: none;
   border: none;
   position: absolute;
@@ -48,14 +48,14 @@ border-radius: 50%;
   right: 30px;
 }
 
-.close{
+.close {
   background: none;
   border: none;
   position: absolute;
   top: 2px;
   right: 10px;
 }
-.FeedbackStats{
+.FeedbackStats {
   display: flex;
   justify-content: space-between;
   width: 80%;
@@ -63,9 +63,30 @@ border-radius: 50%;
   padding: 0 15px 0 50px;
 }
 
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
 
-@media(max-width:900px){
-  .FeedbackStats{
+input {
+ width: 80%;
+  /* border: none; */
+  font-size: 16px;
+}
+input:focus {
+  outline: none;
+}
+.ButtonCustom {
+  border: none;
+  border-radius: 8px;
+  background: red;
+  padding: 10px 15px;
+}
+@media (max-width: 900px) {
+  .FeedbackStats {
     font-size: 12px;
     padding: 0 10px 0 30px;
   }
