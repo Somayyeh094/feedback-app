@@ -3,6 +3,9 @@ import Card from "./shared/Card";
 import { FaTimes, FaEdit } from "react-icons/fa";
 
 function FeedbackItem(props) {
+
+ 
+
   return (
     <Card>
       <div className="num-display">{props.item.rating}</div>
@@ -10,7 +13,7 @@ function FeedbackItem(props) {
         {" "}
         <FaEdit color="purple" />
       </button>
-      <button className="close">
+      <button className="close" onClick={()=> props.handleDelete(props.item.id)}>
         {" "}
         <FaTimes color="purple" />
       </button>
