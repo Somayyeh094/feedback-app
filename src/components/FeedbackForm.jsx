@@ -4,7 +4,7 @@ import Card from "./shared/Card";
 import ButtonCustom from "./shared/ButtonCustom";
 import Rating from "./Rating";
 
-function FeedbackForm() {
+function FeedbackForm({handleAdd}) {
   let [btnDisabled, setBtnDisabled] = useState(true);
   let [text, setText] = useState("");
   let [message, setMessage] = useState("");
@@ -13,7 +13,9 @@ function FeedbackForm() {
   function handleSubmit(event) {
     event.preventDefault();
     if (text.trim().length > 10) {
-      let newFeedback = text;
+      let newFeedback = { rating, text };
+      handleAdd(newFeedback);
+      setText("");
     }
     setBtnDisabled(true);
     setText("");
