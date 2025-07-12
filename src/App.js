@@ -7,6 +7,7 @@ import FeedbackData from "./components/shared/FeedbackData";
 import FeedbackStats from "./components/FeedbackStats";
 import FeedbackForm from "./components/FeedbackForm";
 import AboutPage from "./components/pages/AboutPage";
+import LinkIcon from "./components/LinkIcon";
 
 
 function App() {
@@ -31,12 +32,13 @@ function App() {
             path="/"
             element={
               <>
-                <FeedbackForm handleAdd={addFeedback} />;
-                <FeedbackStats feedbacks={feedback} />;
+                <FeedbackForm handleAdd={addFeedback} />
+                <FeedbackStats feedbacks={feedback} />
                 <FeedbackList
                   feedbacks={feedback}
                   handleDelete={deleteFeedback}
                 />
+                <LinkIcon />
               </>
             }
           />
