@@ -8,7 +8,7 @@ body{
   background-color: #202142;
   color: #fff;
   line-height: 1.6;
-  min-height: 100vh;
+  min-height: 100%;
 }
 .Header {
   background: rgba(0, 0, 0, 0.3);
