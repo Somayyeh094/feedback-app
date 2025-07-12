@@ -102,6 +102,42 @@ input:focus {
   opacity: 1;
 }
 
+.ul-Rating{
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0;
+  list-style: none;
+}
+.ul-Rating li{
+  position: relative;
+  background: #f4f4f4;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+ border: 1px #eee solid;
+  transition: 0.3s;
+  padding: 10px;
+  text-align: center;
+}
+
+.ul-Rating li label {
+  position: absolute;
+   width: 50px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 50%;
+  transform: translate(-64%,-23%);
+  cursor: pointer;
+}
+[type='radio']:checked ~ label, .ul-Rating li:hover {
+  background: #ff6a95;
+  color: #fff;
+}
+[type='radio'] {
+  opacity: 0;
+}
+
+
 @media (max-width: 900px) {
   .FeedbackStats {
     font-size: 12px;

@@ -2,20 +2,21 @@ import React from "react";
 import { useState } from "react";
 import Card from "./shared/Card";
 import ButtonCustom from "./shared/ButtonCustom";
+import Rating from "./Rating";
+
 function FeedbackForm() {
   let [btnDisabled, setBtnDisabled] = useState(true);
   let [text, setText] = useState("");
   let [message, setMessage] = useState("");
+  let[rating, setRating]=useState(10)
 
   function handleSubmit(event) {
     event.preventDefault();
     if (text.trim().length > 10) {
       let newFeedback = text;
-       
     }
     setBtnDisabled(true);
     setText("");
-   
   }
 
   function handleText({ target: { value } }) {
@@ -35,6 +36,7 @@ function FeedbackForm() {
     <Card>
       <form onSubmit={handleSubmit}>
         <h4 className="text-center">How would you rate the service with us?</h4>
+        <Rating select={setRating} selected={rating} />
         <div className="input-group">
           <input
             type="text"
@@ -47,7 +49,7 @@ function FeedbackForm() {
             Send
           </ButtonCustom>
         </div>
-          {message && <div className="message">{message}</div>}
+        {message && <div className="message">{message}</div>}
       </form>
     </Card>
   );
