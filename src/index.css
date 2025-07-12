@@ -64,30 +64,61 @@
 }
 
 .input-group {
-  display: flex;
-  justify-content: space-between;
   border: 1px solid #ccc;
-  padding: 8px 10px;
+  padding: 8px 5px;
   border-radius: 8px;
+  display: flex;
+  flex-direction: row;
 }
 
 input {
- width: 80%;
-  /* border: none; */
+ flex-grow: 2;
+  border: none;
   font-size: 16px;
+  
 }
+
 input:focus {
   outline: none;
 }
-.ButtonCustom {
+
+.button {
   border: none;
   border-radius: 8px;
-  background: red;
   padding: 10px 15px;
 }
+.button-primary{
+  background:#202142; 
+  color: #fff;
+}
+.button:disabled {
+  background-color: #cccccc;
+  color: #333;
+  cursor: auto;
+}
+
+.button:disabled:hover {
+  transform: scale(1);
+  opacity: 1;
+}
+
 @media (max-width: 900px) {
   .FeedbackStats {
     font-size: 12px;
     padding: 0 10px 0 30px;
+  }
+  
+  
+}
+@media(max-width:400px){
+.button{
+    padding: 7px;
+    font-size: 12px;
+  }
+ ::placeholder{
+    font-size: 12px;
+  }
+  input[type='text']{
+    font-size: 12px;
   }
 }
