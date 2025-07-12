@@ -6,7 +6,7 @@ function Rating({ select, selected }) {
   }
 
   return (
-    <div>
+    
       <ul className="ul-Rating">
         {Array.from({ length: 10 }, (_, i) => (
           <li key={i+1}>
@@ -22,7 +22,7 @@ function Rating({ select, selected }) {
           </li>
         ))}
       </ul>
-    </div>
+    
   );
 }
 
